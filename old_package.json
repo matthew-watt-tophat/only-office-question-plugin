@@ -1,0 +1,34 @@
+{
+  "name": "only-office-question-plugin",
+  "version": "1.0.0",
+  "description": "top hat question plugin for only office",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o dist/bundle.js",
+    "watch": "watchify index.js -o dist/bundle.js -v"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.16.7",
+    "@thm/fe-dates": "^2.6.0",
+    "@thm/fe-question": "^9.14.11",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "reading-time": "^1.5.0",
+    "watchify": "^4.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": ["@babel/preset-env", "@babel/preset-react"]
+        }
+      ]
+    ]
+  }
+}
